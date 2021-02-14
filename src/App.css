@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-title {
+  margin-top: 0;
+}
+
+.App-title a {
+  color: white;
+  text-decoration: none;
+  font-size: 48px;
+}
+
+.App-title a:hover {
+  text-decoration: underline;
+}
+
+.App-content {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 16px;
+}
+
+button {
+  font-size: 48px;
+}
+
+a {
+  color: #09f;
+}
+
+ul.home-menu {
+  list-style: none;
+}
+
+ul.home-menu li {
+  padding: 15px;
+}
+
+ul.home-menu li a {
+  color: #09f;
+  font-size: 24px;
+}
