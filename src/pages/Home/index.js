@@ -4,6 +4,7 @@ import ListOfGifs from 'components/ListOfGifs';
 import TrendingSearches from 'components/TrendingSearches';
 
 import { useGifs } from 'hooks/useGifs';
+import Category from 'components/Category';
 
 const POPULAR_GIFS = ['Matrix', 'Pandas', 'Venezuela', 'Chile', 'Colombia'];
 
@@ -25,20 +26,13 @@ export default function Home() {
         <>
             <form onSubmit={handleSubmit}>
                 <input type="text" onChange={handleChange} value={keyword} placeholder="Buscar gifs" />
+                <button>Search</button>
             </form>
 
             <h3 className="section-title">Última búsqueda</h3>
             <ListOfGifs gifs={gifs} />
 
-            <h3 className="section-title">Los gifs más populares</h3>
-
-            <ul className="home-menu">
-                {POPULAR_GIFS.map((populartGif) => (
-                    <li key={populartGif}>
-                        <Link to={`/search/${populartGif}`}>Gifs de {populartGif}</Link>
-                    </li>
-                ))}
-            </ul>
+            <Category title="Los gifs más populares" options={POPULAR_GIFS} />
 
             <TrendingSearches />
         </>

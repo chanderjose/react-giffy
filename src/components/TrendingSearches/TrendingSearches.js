@@ -1,3 +1,4 @@
+import Category from 'components/Category';
 import { useEffect, useState } from 'react';
 import getTrendingTerms from 'services/getTrendingTermsService';
 
@@ -10,10 +11,6 @@ export default function TrendingSearches() {
     }, [])
 
     return (
-        <ul>
-            {trends.map(trend =>
-                <li>{trend}</li>
-            )}
-        </ul>
+        <Category title="Trending Gifs" options={trends} />
     );
 }

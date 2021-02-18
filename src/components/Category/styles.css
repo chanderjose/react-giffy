@@ -1,0 +1,23 @@
+.Category-title {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.6rem;
+}
+
+.Category-list li {
+    list-style: none;
+}
+
+.Category-list li a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.Category-list li a:hover {
+    /*transform: scale(2);*/
+    background: rgba(255, 255, 255, 0.1);
+}
