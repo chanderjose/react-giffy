@@ -5,17 +5,22 @@
     color: #fff;
     flex-direction: column;
     text-decoration: none;
-    margin: 16px;
-    /*padding: 32px;*/
     width: 100%;
+    position: relative;
 }
 
 .Gif h4 {
     margin: 0;
+    background: rgba(0, 0, 0, .3);
+    bottom: 0;
+    font-size: 12px;
+    color: white;
+    position: absolute;
 }
 
 .Gif img {
     object-fit: contain;
+    width: 100%;
 }
 
 i {
