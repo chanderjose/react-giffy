@@ -4,6 +4,7 @@ import ListOfGifs from 'components/ListOfGifs';
 import { useGifs } from 'hooks/useGifs';
 import useNearScreen from 'hooks/useNearScreen';
 import debounce from 'just-debounce-it';
+import useSEO from 'hooks/useSEO';
 
 export default function SearchResults({ params }) {
     const { keyword } = params;
@@ -16,9 +17,11 @@ export default function SearchResults({ params }) {
     ), [setPage]);
 
     useEffect(() => {
-        console.log(isNearScreen)
         if(isNearScreen) debounceHandleNextPage()
     }, [debounceHandleNextPage, isNearScreen]);
+
+    const title = gifs ? `${gifs.length} results of ${keyword}` : '';
+    useSEO({title});
 
     if(loading) return <i>Cargando 🤖</i>
 
