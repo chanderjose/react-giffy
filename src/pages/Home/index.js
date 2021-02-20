@@ -6,6 +6,7 @@ import TrendingSearches from 'components/TrendingSearches';
 import { useGifs } from 'hooks/useGifs';
 import Category from 'components/Category';
 import SearchForm from 'components/SearchForm';
+import {Helmet} from 'react-helmet';
 
 const POPULAR_GIFS = ['Matrix', 'Pandas', 'Venezuela', 'Chile', 'Colombia'];
 
@@ -17,10 +18,11 @@ export default function Home() {
         pushLocation(`/search/${keyword}`);
     }, [pushLocation]);
 
-
-
     return(
         <>
+            <Helmet>
+                <title>Home | Giffy</title>
+            </Helmet>
             <SearchForm onSubmit={handleSubmit} />
 
             <h3 className="section-title">Última búsqueda</h3>
