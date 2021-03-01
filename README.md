@@ -9,6 +9,6 @@ Project created with [Create React App](https://github.com/facebook/create-react
 
 # Run
 
-First you have to create an user API key in (Giphy Developers)[https://developers.giphy.com/] and update the variable `API_KEY` in `src/services/settings.js` file.
+First you have to create an user API key in [Giphy Developers](https://developers.giphy.com/) and update the variable `API_KEY` in `src/services/settings.js` file.
 
 Then you can use `npm install` and `npm start` to run the project
