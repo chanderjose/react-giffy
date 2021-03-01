@@ -14,7 +14,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="App-title"><Link to="/">App</Link></h1>
+      <Link to="/">
+        <figure className="App-logo">
+          <img alt='Giffy logo' src='/logo.png' />
+        </figure>
+      </Link>
       <Suspense fallback={null}>
         <section className="App-content">
           <GifsContextProvider>

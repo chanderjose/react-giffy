@@ -11,6 +11,6 @@ export default function TrendingSearches() {
     }, [])
 
     return (
-        <Category title="Trending Gifs" options={trends} />
+        <Category title="Trending" options={trends} />
     );
 }

@@ -8,7 +8,7 @@ import Category from 'components/Category';
 import SearchForm from 'components/SearchForm';
 import {Helmet} from 'react-helmet';
 
-const POPULAR_GIFS = ['Matrix', 'Pandas', 'Venezuela', 'Chile', 'Colombia'];
+//const POPULAR_GIFS = ['Matrix', 'Pandas', 'Venezuela', 'Chile', 'Colombia'];
 
 export default function Home() {
     const [path, pushLocation] = useLocation();
@@ -18,19 +18,27 @@ export default function Home() {
         pushLocation(`/search/${keyword}`);
     }, [pushLocation]);
 
+    //<Category title="Los gifs más populares" options={POPULAR_GIFS} />
+
     return(
         <>
             <Helmet>
                 <title>Home | Giffy</title>
             </Helmet>
-            <SearchForm onSubmit={handleSubmit} />
-
-            <h3 className="section-title">Última búsqueda</h3>
-            <ListOfGifs gifs={gifs} />
-
-            <Category title="Los gifs más populares" options={POPULAR_GIFS} />
-
-            <TrendingSearches />
+            <header className="o-header">
+                <SearchForm onSubmit={handleSubmit} />
+            </header>
+            <div className="App-wrapper">
+                <div className="App-main">
+                    <div className="App-results">
+                        <h3 className="App-title">Última búsqueda</h3>
+                        <ListOfGifs gifs={gifs} />
+                    </div>
+                    <div className="App-category">
+                        <TrendingSearches />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

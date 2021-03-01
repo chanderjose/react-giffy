@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 
 import ListOfGifs from 'components/ListOfGifs';
+import Spinner from 'components/Spinner'
 import { useGifs } from 'hooks/useGifs';
 import useNearScreen from 'hooks/useNearScreen';
 import debounce from 'just-debounce-it';
@@ -22,10 +23,10 @@ export default function SearchResults({ params }) {
 
     const title = gifs ? `${gifs.length} results of ${keyword}` : '';
 
-    if(loading) return <i>Cargando 🤖</i>
+    if(loading) return <Spinner />
 
     return (
-        <>
+        <div className="App-wrapper">
             <Helmet>
                 <title>{title} | Giffy</title>
                 <meta name="description" content={title}/>
@@ -36,6 +37,6 @@ export default function SearchResults({ params }) {
             <ListOfGifs gifs={gifs} />
             <br />
             <div id="visor" ref={externalRef}></div>
-        </>
+        </div>
     )
 }
