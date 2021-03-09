@@ -11,12 +11,7 @@ import {Helmet} from 'react-helmet';
 //const POPULAR_GIFS = ['Matrix', 'Pandas', 'Venezuela', 'Chile', 'Colombia'];
 
 export default function Home() {
-    const [path, pushLocation] = useLocation();
     const { loading, gifs } = useGifs();
-
-    const handleSubmit = useCallback(({ keyword }) => {
-        pushLocation(`/search/${keyword}`);
-    }, [pushLocation]);
 
     //<Category title="Los gifs más populares" options={POPULAR_GIFS} />
 
@@ -26,7 +21,7 @@ export default function Home() {
                 <title>Home | Giffy</title>
             </Helmet>
             <header className="o-header">
-                <SearchForm onSubmit={handleSubmit} />
+                <SearchForm />
             </header>
             <div className="App-wrapper">
                 <div className="App-main">
