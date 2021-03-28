@@ -9,6 +9,7 @@
     position: relative;
     transition: all 0.3s ease;
     box-sizing: border-box;
+    position: relative;
 }
 
 .Gif-link {
@@ -39,6 +40,12 @@ i {
     font-style: normal;
 }
 
+.Gif-buttons {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+}
 
 .Gif, .Gif-link {
   height: 100%;
